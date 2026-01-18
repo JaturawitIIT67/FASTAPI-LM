@@ -9,3 +9,6 @@ router = APIRouter()
 def get_recommendations(data: RecommendRequest):
     recommendations = search_predict(data.query, data.top_k, data.type)
     return recommendations
+@router.get('/user')
+def get_recommendations():
+    return{"message": "User recommendation endpoint"}
