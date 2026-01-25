@@ -21,3 +21,8 @@ app_router.include_router(
     prefix='/flight',
     tags=['Flight Price Prediction']
 )
+app_router.include_router(
+    animal_router,
+    prefix='/animal',
+    tags=['Animal Image Classification']
+)
